@@ -100,3 +100,25 @@ class User {
     }
 
 }
+
+class Kategori {
+    
+    protected $conn;                           
+    
+    function getKategori($params) {
+        $db = new Database();
+        $connString = $db->getConstring();
+        $this->conn = $connString;
+        
+        $json_data = array();        
+        $sql = "SELECT id, nama_kategori FROM tb_kategori ";        
+        $sql .= " WHERE id = '$params'";
+        
+        $result = mysqli_query($this->conn, $sql);
+        
+        $row = mysqli_fetch_assoc($result);
+            $json_data = $row['nama_kategori'];        
+            
+            return $json_data;
+    }
+}

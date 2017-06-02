@@ -21,7 +21,7 @@
         <script src="theme/js/bootstrap.min.js"></script>        
         <script src="theme/js/jquery.validate.min.js"></script>
         <script src="theme/flexigrid/js/flexigrid.pack.js"></script>
-        <script src="theme/tinymce/tinymce.min.js"></script>
+        <script src="theme/tinymce/tinymce.min.js"></script>        
     </head>
 
     <body>
@@ -75,7 +75,13 @@
                                 <i class="fa fa-fw fa-book"></i>
                                 Artikel
                             </a>
-                        </li>                                                
+                        </li>          
+                        <li>
+                            <a href="?page=produk">
+                                <i class="fa fa-fw fa-shopping-cart"></i>
+                                Produk
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

@@ -4875,7 +4875,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 
 .navbar-default {
-    background-color: #fff;    
+    background-color: transparent;
 }
 
     .navbar-default .navbar-brand {
@@ -4892,7 +4892,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
     }
 
     .navbar-default .navbar-nav > li > a {
-        color: #333;
+        color: #333;        
     }
 
         .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {

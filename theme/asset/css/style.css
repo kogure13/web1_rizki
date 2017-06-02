@@ -2,7 +2,9 @@
 body{
     color: #222;
     font-size: 13px;
-    background-color: #fff;
+    background: url('../images/obat_tradisional.jpg') no-repeat;
+    background-size: cover;
+    background-color: #fff;    
     margin: 0;
 }
 
@@ -18,10 +20,10 @@ footer{
 .header{
     width: auto;
     height: 70px;
-    margin-top: 20px;
+    background-color: #fff;    
 }
 .logo{
-    background-image: url(../images/);
+    background-image: url(../images/cropped-logo.png);
     background-repeat: no-repeat;
     height: 55px;
     width: 200px;
@@ -29,8 +31,7 @@ footer{
     float: left;
     cursor: pointer;
 }
-.content{
-    margin-top: 10px;
+.content{ 
     margin-bottom: 20px;
 }
 .top{
@@ -58,22 +59,14 @@ footer{
 .left-box{
     margin: 20px 0px;
     background-color: #fff;
-    padding: 20px 30px;
-    -webkit-box-shadow: 2px 4px 1px #eeeeee;
-    -moz-box-shadow: 2px 4px 1px #eeeeee;
-    box-shadow: 2px 4px 1px #eeeeee;
-    width: 65%;
+    padding: 20px 30px;    
+    width: 100%;
     float: left;
-    color: #000;
-    font-size: 13px;
+    color: #000;    
 }
 .right-box {    
-    background-color: #fff;    
-    -webkit-box-shadow: 2px 4px 1px #eeeeee;
-    -moz-box-shadow: 2px 4px 1px #eeeeee;
-    box-shadow: 2px 4px 1px #eeeeee;    
+    background-color: #fff;        
     min-height: 400px;    
-    font-size: 13px;
 }
 .footer{
     background-color: #6b6b6b;
@@ -81,4 +74,8 @@ footer{
     height: 40px;
     color: #fff;
     text-align: center;
+}
+
+.carousel-inner img {
+    margin: auto;
 }

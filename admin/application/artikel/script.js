@@ -62,17 +62,17 @@ $(document).ready(function () {
         sortorder: 'asc',
         usepager: true,
         useRp: true,
-        rp: 10,   
+        rp: 10,
         singleSelect: true,
         striped: true,
         width: 'auto',
         height: 'auto'
     });
-    
+
     $('#tgl_artikel').datepicker({
         dateFormat: 'YY-M-DD'
     });
-    
+
     var items = '';
     $.ajax({
         url: "application/kategori/option_kategori.php",
@@ -83,10 +83,10 @@ $(document).ready(function () {
             });
             $('#kategori').append(items);
         }
-}); 
+    });
 });
 
-$(function(){
+$(function () {
     $('#frm_kamuspenyakit').validate({
         rules: {
             kode: {
@@ -94,7 +94,7 @@ $(function(){
             },
             nama_penyakit: {
                 required: true
-            }            
+            }
         },
         messages: {
             kode: {
@@ -104,48 +104,48 @@ $(function(){
                 required: 'field cannot empty'
             }
         },
-        submitHandler: function(form){
-            var com_action =$('#action').val();
-            if(com_action == 'add'){
+        submitHandler: function (form) {
+            var com_action = $('#action').val();
+            if (com_action == 'add') {
                 ajaxAction('add');
-            }else if(com_action == 'edit'){
+            } else if (com_action == 'edit') {
                 ajaxAction('edit');
             }
-            
+
             $('#frm_artikel').trigger('reset');
         }
-    });    
+    });
 });
 
-function gridAction(com, grid){
-    if(com == 'Add'){        
+function gridAction(com, grid) {
+    if (com == 'Add') {
         $('#action').val('add');
-    }else if(com == 'Edit'){
-        if($('.trSelected', grid).length > 0){
+    } else if (com == 'Edit') {
+        if ($('.trSelected', grid).length > 0) {
             $('#add_model').modal('show');
             $('#action').val('edit');
             $('.modal-title').html('Edit Kamus Penyakit');
-            $.each($('.trSelected', grid), function(key, value){
-               $('#edit_id').val(value.children[0].innerText);
-               
+            $.each($('.trSelected', grid), function (key, value) {
+                $('#edit_id').val(value.children[0].innerText);
+
             });
         } else {
             alert("No row selected First select row, then click edit button");
             return;
-        }        
+        }
     }
 }
 
 function ajaxAction(action) {
     data = $('#frm_artikel').serializeArray();
-    
+
     $.ajax({
-       url: 'application/artikel/data_artikel.php',
-       dataType: 'json',
-       type: 'post',
-       data: data,
-       success: function(response){           
-           $('#tbl_artikel').flexReload();
-       }
+        url: 'application/artikel/data_artikel.php',
+        dataType: 'json',
+        type: 'post',
+        data: data,
+        success: function (response) {
+            $('#tbl_artikel').flexReload();
+        }
     });
 }

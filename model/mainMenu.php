@@ -22,13 +22,19 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
                             <ul class="nav navbar-nav navbar-right">
                                 <li>                                    
-                                    <a href="#">
+                                    <a href="index.php">
                                         <i class="fa fa-home fa-fw"></i>
                                         Beranda
                                     </a>
                                 </li>
                                 <li>                                    
-                                    <a href="#">
+                                    <a href="?page=produk">
+                                        <i class="fa fa-cart-plus fa-fw"></i>
+                                        Produk
+                                    </a>
+                                </li>                                                                        
+                                <li>                                    
+                                    <a href="?page=profile">
                                         <i class="fa fa-user-circle fa-fw"></i>
                                         Profile
                                     </a>

@@ -12,7 +12,7 @@
             <div class="top">
                 <div class="container">
                     <h2 class="titletop">
-                        Artikel<br />
+                        Online Shop<br />
                         <span>Obat Herbal</span>
                     </h2>
                 </div>                
@@ -20,21 +20,30 @@
             <div class="container">
                 <br style="clear: both;" />
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="right-box">
                             <?= $main->getPage(); ?>
-                            
+
                         </div>                        
                     </div>
-                    <div class="col-md-4">                            
+                    <div class="col-md-3"> 
+                        <div class="form-group">
+                            <form name="pencarian" id="pencarian">
+                                <div class="input-group add-on">
+                                    <input type="text" class="form-control input-sm" placeholder="Search...">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-default" type="submit"><i class="fa fa-search fa-fw"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <div class="panel panel-success">
                             <div class="panel-heading">
-                                Artikel Herbal's
+                                Herbal's Kategori
                             </div>
                             <div class="panel-body">
-                                <form name="pencarian" id="pencarian">
-                                    
-                                </form>
+                                <ul class="list-group" id="itemKategori">                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -50,6 +59,20 @@
                     </p>
                 </div>
             </div>
-        </footer>        
+        </footer>
+        <script>
+            var itemsKategori = '';            
+            $.ajax({
+                url: "application/list_kategori.php",
+                dataType: 'JSON',
+                success: function (data) {
+                    $.each(data, function (key, value) {
+                        itemsKategori += "<li class='list-group-item'>\n\
+                <a href=?page=produk&kategori="+value.id+">"+value.nama_kategori+"</a></li>";
+                    });
+                    $('#itemKategori').append(itemsKategori);
+                }
+            });
+        </script>
     </body>
 </html>
