@@ -4,7 +4,7 @@ include '../inc/class.php';
 $db = new Database();
 $connString = $db->getConstring();
 
-if(!isset($_SESSION['user_login'])){
+if(!isset($_SESSION['admin_login'])){
     if(isset($_POST['submitLogin'])) {
         $user = new User($connString);
         $user->cekLogin($_POST['username'], $_POST['password']);

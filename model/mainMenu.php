@@ -1,7 +1,7 @@
 <div class="header">            
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 hidden-sm hidden-xs">
+            <div class="col-sm-4">
                 <div class="logo"></div>
             </div>
             <div class="col-sm-8">

@@ -27,10 +27,10 @@ if (!isset($_GET['kategori'])) {
         success: function (data) {
             $.each(data, function (key, value) {
                 items += "<div class='col-sm-3 com-md-4'>\n\
-        <div class='thumbnail'>\n\
-<img src='" + value.link_gambar + "'>" + value.nama_produk + " \n\
-<p class='text-muted'>" + formatCurrency(value.harga_produk) + "</p>\n\
-</div></div>";
+                <div class='thumbnail'>\n\
+                <img src='" + value.link_gambar + "'>" + value.nama_produk + " \n\
+                <p class='text-muted'>" + formatCurrency(value.harga_produk) + "</p>\n\
+                <a href='?page=beli&id=" + value.id + "' class='btn btn-sm btn-primary'>Beli</a></div></div>";
             });
             $('#listProduk').append(items);
         }
